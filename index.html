@@ -60,10 +60,10 @@ h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bot
 .tab-panel{display:none;animation:fadeTab .3s ease}
 .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
 @keyframes fadeTab{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.tab-icon-big{font-size:4rem;margin-bottom:1rem}
+.tab-icon-big{margin-bottom:1.25rem;display:flex}
 .tab-panel h3{font-size:1.5rem;font-weight:800;margin-bottom:.75rem}
 .tab-panel p{color:var(--muted);line-height:1.8}
-.tab-visual{background:var(--bg2);border:1px solid var(--border);border-radius:14px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.tab-visual{background:#0d0d0d;border:1px solid var(--border);border-radius:14px;overflow:hidden;font-size:.75rem;}
 #screenshots{background:var(--bg2)}
 .carousel{position:relative;overflow:hidden;border-radius:16px;margin-top:3rem}
 .carousel-track{display:flex;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
@@ -106,7 +106,7 @@ footer p{color:var(--muted);font-size:.85rem}
     <li><a href='#features'>Features</a></li>
     <li><a href='#why'>Why GymHub</a></li>
   </ul>
-  <a href='https://gym-management-system-production-b6c8.up.railway.app/register' class='nav-cta'>Register &rarr;</a>
+  <a href='https://gym-management-system-production-b6c8.up.railway.app/' class='nav-cta'>Register &rarr;</a>
   <button class='nav-toggle' onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
 </nav>
 <section id='hero'>
@@ -116,9 +116,9 @@ footer p{color:var(--muted);font-size:.85rem}
     <a href='https://gym-management-system-production-b6c8.up.railway.app/login' class='btn-primary'>&#128640; Get Started Free</a>
     <a href='#features' class='btn-secondary'>&#10024; See Features</a>
   </div>
-
+​
   
-
+​
 </section>
 <section id='stats'>
   <div class='stats-grid'>
@@ -128,7 +128,7 @@ footer p{color:var(--muted);font-size:.85rem}
     <div class='reveal reveal-delay-3'><div class='stat-num' data-target='24'>0</div><div class='stat-label'>&#47;7 AI Support</div></div>
   </div>
 </section>
-
+​
 <section id='problem'>
   <div class='container'>
     <div class='section-tag reveal'>The Problem</div>
@@ -156,15 +156,96 @@ footer p{color:var(--muted);font-size:.85rem}
       <button class='tab-btn' data-tab='4'>WhatsApp AI</button>
       
     </div>
-    <div id='tab0' class='tab-panel active'><div><div class='tab-icon-big'>&#128101;</div><h3>Member Management</h3><p>Add, edit, and view all your gym members in one place. Track their active status, contact info, subscription history, and attendance from a single powerful profile page.</p></div><div class='tab-visual'>&#128101;</div></div>
-    <div id='tab1' class='tab-panel'><div><div class='tab-icon-big'>&#128197;</div><h3>Subscription Plans</h3><p>Create flexible monthly or yearly plans, assign them to members, and get notified before renewals expire. Never lose a paying member to a forgotten renewal again.</p></div><div class='tab-visual'>&#128197;</div></div>
-    <div id='tab2' class='tab-panel'><div><div class='tab-icon-big'>&#128202;</div><h3>Attendance Tracking</h3><p>Log daily check-ins instantly, monitor attendance patterns over time, and identify your most and least engaged members with built-in analytics.</p></div><div class='tab-visual'>&#128202;</div></div>
-    <div id='tab3' class='tab-panel'><div><div class='tab-icon-big'>&#128176;</div><h3>Revenue Dashboard</h3><p>See your monthly revenue at a glance with beautiful charts. Understand which plans drive the most income and spot growth trends early.</p></div><div class='tab-visual'>&#128176;</div></div>
-    <div id='tab4' class='tab-panel'><div><div class='tab-icon-big'>&#129302;</div><h3>WhatsApp AI Assistant</h3><p>An AI-powered WhatsApp bot answers member questions, sends renewal reminders, and handles FAQs automatically 24/7, without you lifting a finger.</p></div><div class='tab-visual'>&#129302;</div></div>
+    <div id='tab0' class='tab-panel active'><div><div class='tab-icon-big'><svg width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='#f97316' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M23 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg></div><h3>Member Management</h3><p>Add, edit, and view all your gym members in one place. Track their active status, contact info, subscription history, and attendance from a single powerful profile page.</p></div><div class='tab-visual'>
+  <div style='background:#111;padding:.5rem .75rem;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center'>
+    <span style='font-weight:700;font-size:.78rem'>Members <span style='color:#a3a3a3;font-weight:400'>· 24 registered</span></span>
+    <span style='background:#f97316;color:#fff;padding:.2rem .6rem;border-radius:6px;font-size:.65rem;font-weight:600'>+ Add Member</span>
+  </div>
+  <div style='padding:.4rem .75rem .2rem;'>
+    <div style='display:grid;grid-template-columns:2fr 1.5fr 1.5fr .8fr;gap:.3rem;color:#a3a3a3;font-size:.6rem;padding:.25rem 0;border-bottom:1px solid #2a2a2a;font-weight:600'>MEMBER<span>PHONE</span><span>EMAIL</span><span>STATUS</span></div>
+    <div style='display:grid;grid-template-columns:2fr 1.5fr 1.5fr .8fr;gap:.3rem;padding:.3rem 0;border-bottom:1px solid #1a1a1a;align-items:center'><span style='display:flex;align-items:center;gap:.35rem'><span style='background:#f97316;color:#fff;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800'>A</span>Ahmed Hassan</span><span style='color:#a3a3a3'>01012345678</span><span style='color:#a3a3a3'>ahmed@gmail.com</span><span style='color:#22c55e;font-size:.6rem;font-weight:700'>ACTIVE</span></div>
+    <div style='display:grid;grid-template-columns:2fr 1.5fr 1.5fr .8fr;gap:.3rem;padding:.3rem 0;border-bottom:1px solid #1a1a1a;align-items:center'><span style='display:flex;align-items:center;gap:.35rem'><span style='background:#6366f1;color:#fff;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800'>S</span>Sara Mohamed</span><span style='color:#a3a3a3'>01098765432</span><span style='color:#a3a3a3'>sara@gmail.com</span><span style='color:#22c55e;font-size:.6rem;font-weight:700'>ACTIVE</span></div>
+    <div style='display:grid;grid-template-columns:2fr 1.5fr 1.5fr .8fr;gap:.3rem;padding:.3rem 0;border-bottom:1px solid #1a1a1a;align-items:center'><span style='display:flex;align-items:center;gap:.35rem'><span style='background:#8b5cf6;color:#fff;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800'>M</span>Mohamed Ali</span><span style='color:#a3a3a3'>01123456789</span><span style='color:#a3a3a3'>moh@gmail.com</span><span style='color:#22c55e;font-size:.6rem;font-weight:700'>ACTIVE</span></div>
+    <div style='display:grid;grid-template-columns:2fr 1.5fr 1.5fr .8fr;gap:.3rem;padding:.3rem 0;border-bottom:1px solid #1a1a1a;align-items:center'><span style='display:flex;align-items:center;gap:.35rem'><span style='background:#ec4899;color:#fff;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800'>N</span>Nour Khaled</span><span style='color:#a3a3a3'>01056781234</span><span style='color:#a3a3a3'>nour@gmail.com</span><span style='color:#ef4444;font-size:.6rem;font-weight:700'>INACTIVE</span></div>
+    <div style='display:grid;grid-template-columns:2fr 1.5fr 1.5fr .8fr;gap:.3rem;padding:.3rem 0;align-items:center'><span style='display:flex;align-items:center;gap:.35rem'><span style='background:#14b8a6;color:#fff;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800'>O</span>Omar Sayed</span><span style='color:#a3a3a3'>01234567890</span><span style='color:#a3a3a3'>omar@gmail.com</span><span style='color:#22c55e;font-size:.6rem;font-weight:700'>ACTIVE</span></div>
+  </div>
+</div></div>
+    <div id='tab1' class='tab-panel'><div><div class='tab-icon-big'><svg width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='#f97316' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='4' width='18' height='18' rx='2' ry='2'/><line x1='16' y1='2' x2='16' y2='6'/><line x1='8' y1='2' x2='8' y2='6'/><line x1='3' y1='10' x2='21' y2='10'/><path d='M8 14h.01'/><path d='M12 14h.01'/><path d='M16 14h.01'/><path d='M8 18h.01'/><path d='M12 18h.01'/></svg></div><h3>Subscription Plans</h3><p>Create flexible monthly or yearly plans, assign them to members, and get notified before renewals expire. Never lose a paying member to a forgotten renewal again.</p></div><div class='tab-visual'>
+  <div style='background:#111;padding:.5rem .75rem;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center'>
+    <span style='font-weight:700;font-size:.78rem'>Subscriptions</span>
+    <span style='background:#f97316;color:#fff;padding:.2rem .6rem;border-radius:6px;font-size:.65rem;font-weight:600'>+ New Plan</span>
+  </div>
+  <div style='display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;padding:.5rem .6rem'>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.45rem .55rem'><div style='font-size:.58rem;color:#a3a3a3'>Monthly Revenue</div><div style='font-size:1rem;font-weight:900;color:#f97316'>4,800 EGP</div><div style='font-size:.52rem;color:#22c55e'>↑ 12% vs last month</div></div>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.45rem .55rem'><div style='font-size:.58rem;color:#a3a3a3'>Total Plans</div><div style='font-size:1rem;font-weight:900'>3</div><div style='font-size:.52rem;color:#22c55e'>2 active plans</div></div>
+  </div>
+  <div style='padding:0 .6rem;font-size:.62rem;font-weight:700;color:#a3a3a3;margin-bottom:.3rem'>AVAILABLE PLANS</div>
+  <div style='margin:0 .6rem .35rem;background:#111;border:1px solid #f97316;border-radius:8px;padding:.4rem .55rem;display:flex;justify-content:space-between;align-items:center'><div><div style='font-weight:700'>Monthly Plan</div><div style='color:#a3a3a3;font-size:.6rem'>Renews every 30 days</div></div><div style='text-align:right'><div style='color:#f97316;font-weight:800'>350 EGP</div><div style='color:#22c55e;font-size:.6rem'>18 subscribed</div></div></div>
+  <div style='margin:0 .6rem .35rem;background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.4rem .55rem;display:flex;justify-content:space-between;align-items:center'><div><div style='font-weight:700'>Quarterly Plan</div><div style='color:#a3a3a3;font-size:.6rem'>Renews every 90 days</div></div><div style='text-align:right'><div style='color:#f97316;font-weight:800'>900 EGP</div><div style='color:#22c55e;font-size:.6rem'>5 subscribed</div></div></div>
+  <div style='margin:0 .6rem;background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.4rem .55rem;display:flex;justify-content:space-between;align-items:center'><div><div style='font-weight:700'>Annual Plan</div><div style='color:#a3a3a3;font-size:.6rem'>Renews every 365 days</div></div><div style='text-align:right'><div style='color:#f97316;font-weight:800'>3,000 EGP</div><div style='color:#22c55e;font-size:.6rem'>1 subscribed</div></div></div>
+</div></div>
+    <div id='tab2' class='tab-panel'><div><div class='tab-icon-big'><svg width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='#f97316' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 11 12 14 22 4'/><path d='M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11'/></svg></div><h3>Attendance Tracking</h3><p>Log daily check-ins instantly, monitor attendance patterns over time, and identify your most and least engaged members with built-in analytics.</p></div><div class='tab-visual'>
+  <div style='background:#111;padding:.5rem .75rem;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center'>
+    <span style='font-weight:700;font-size:.78rem'>Attendance <span style='color:#a3a3a3;font-weight:400'>· Friday, June 19</span></span>
+    <span style='background:rgba(249,115,22,.15);color:#f97316;padding:.2rem .55rem;border-radius:6px;font-size:.65rem;font-weight:700'>14 CHECK-INS TODAY</span>
+  </div>
+  <div style='display:grid;grid-template-columns:1fr 1fr;gap:.4rem;padding:.45rem .6rem'>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.45rem .55rem'>
+      <div style='font-size:.62rem;font-weight:700;margin-bottom:.35rem'>Check In a Member</div>
+      <div style='background:#1a1a1a;border-radius:6px;padding:.3rem .5rem;color:#a3a3a3;font-size:.6rem;margin-bottom:.3rem'>Search member...</div>
+      <div style='display:flex;justify-content:space-between;align-items:center;padding:.28rem .3rem;background:#1a1a1a;border-radius:6px;margin-bottom:.2rem'><div><div style='font-size:.65rem;font-weight:600'>Ahmed Hassan</div><div style='font-size:.55rem;color:#a3a3a3'>01012345678</div></div><div style='background:#f97316;color:#fff;padding:.15rem .45rem;border-radius:5px;font-size:.58rem;font-weight:700'>Check in</div></div>
+      <div style='display:flex;justify-content:space-between;align-items:center;padding:.28rem .3rem;background:#1a1a1a;border-radius:6px;margin-bottom:.2rem'><div><div style='font-size:.65rem;font-weight:600'>Sara Mohamed</div><div style='font-size:.55rem;color:#a3a3a3'>01098765432</div></div><div style='background:#f97316;color:#fff;padding:.15rem .45rem;border-radius:5px;font-size:.58rem;font-weight:700'>Check in</div></div>
+      <div style='display:flex;justify-content:space-between;align-items:center;padding:.28rem .3rem;background:#1a1a1a;border-radius:6px'><div><div style='font-size:.65rem;font-weight:600'>Omar Sayed</div><div style='font-size:.55rem;color:#a3a3a3'>01234567890</div></div><div style='background:#f97316;color:#fff;padding:.15rem .45rem;border-radius:5px;font-size:.58rem;font-weight:700'>Check in</div></div>
+    </div>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.45rem .55rem'>
+      <div style='font-size:.62rem;font-weight:700;margin-bottom:.35rem'>Today&#39;s Log <span style='color:#a3a3a3;font-weight:400'>· 14 entries</span></div>
+      <div style='display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid #1a1a1a;font-size:.6rem'><span>Ahmed Hassan</span><span style='color:#a3a3a3'>09:14 AM</span></div>
+      <div style='display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid #1a1a1a;font-size:.6rem'><span>Mohamed Ali</span><span style='color:#a3a3a3'>09:32 AM</span></div>
+      <div style='display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid #1a1a1a;font-size:.6rem'><span>Sara Mohamed</span><span style='color:#a3a3a3'>10:05 AM</span></div>
+      <div style='display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid #1a1a1a;font-size:.6rem'><span>Youssef Tarek</span><span style='color:#a3a3a3'>10:48 AM</span></div>
+      <div style='display:flex;justify-content:space-between;padding:.25rem 0;font-size:.6rem'><span>Nada Ibrahim</span><span style='color:#a3a3a3'>11:20 AM</span></div>
+    </div>
+  </div>
+</div></div>
+    <div id='tab3' class='tab-panel'><div><div class='tab-icon-big'><svg width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='#f97316' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='1' x2='12' y2='23'/><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg></div><h3>Revenue Dashboard</h3><p>See your monthly revenue at a glance with beautiful charts. Understand which plans drive the most income and spot growth trends early.</p></div><div class='tab-visual'>
+  <div style='background:#111;padding:.5rem .75rem;border-bottom:1px solid #2a2a2a'>
+    <span style='font-weight:700;font-size:.78rem'>Revenue Dashboard</span>
+  </div>
+  <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;padding:.45rem .6rem .3rem'>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.4rem .5rem'><div style='font-size:.58rem;color:#a3a3a3'>This Month</div><div style='font-size:.95rem;font-weight:900;color:#f97316'>4,800 EGP</div><div style='font-size:.52rem;color:#22c55e'>↑ 12%</div></div>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.4rem .5rem'><div style='font-size:.58rem;color:#a3a3a3'>Last Month</div><div style='font-size:.95rem;font-weight:900'>4,290 EGP</div><div style='font-size:.52rem;color:#a3a3a3'>Baseline</div></div>
+    <div style='background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.4rem .5rem'><div style='font-size:.58rem;color:#a3a3a3'>Annual Total</div><div style='font-size:.95rem;font-weight:900'>38,400 EGP</div><div style='font-size:.52rem;color:#22c55e'>↑ 8% YoY</div></div>
+  </div>
+  <div style='margin:0 .6rem;background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:.45rem .55rem'>
+    <div style='font-size:.6rem;font-weight:700;margin-bottom:.4rem'>Monthly Revenue — 2026</div>
+    <div style='display:flex;align-items:flex-end;gap:4px;height:60px'>
+      <div style='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px'><div style='width:100%;background:#f97316;border-radius:2px 2px 0 0;opacity:.6;height:45%'></div><div style='font-size:.45rem;color:#a3a3a3'>Jan</div></div>
+      <div style='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px'><div style='width:100%;background:#f97316;border-radius:2px 2px 0 0;opacity:.6;height:55%'></div><div style='font-size:.45rem;color:#a3a3a3'>Feb</div></div>
+      <div style='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px'><div style='width:100%;background:#f97316;border-radius:2px 2px 0 0;opacity:.6;height:50%'></div><div style='font-size:.45rem;color:#a3a3a3'>Mar</div></div>
+      <div style='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px'><div style='width:100%;background:#f97316;border-radius:2px 2px 0 0;opacity:.6;height:70%'></div><div style='font-size:.45rem;color:#a3a3a3'>Apr</div></div>
+      <div style='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px'><div style='width:100%;background:#f97316;border-radius:2px 2px 0 0;opacity:.6;height:65%'></div><div style='font-size:.45rem;color:#a3a3a3'>May</div></div>
+      <div style='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px'><div style='width:100%;background:#f97316;border-radius:2px 2px 0 0;height:100%'></div><div style='font-size:.45rem;color:#f97316;font-weight:700'>Jun</div></div>
+    </div>
+  </div>
+</div></div>
+    <div id='tab4' class='tab-panel'><div><div class='tab-icon-big'><svg width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='#f97316' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/><line x1='9' y1='10' x2='9' y2='10'/><line x1='12' y1='10' x2='12' y2='10'/><line x1='15' y1='10' x2='15' y2='10'/></svg></div><h3>WhatsApp AI Assistant</h3><p>An AI-powered WhatsApp bot answers member questions, sends renewal reminders, and handles FAQs automatically 24/7, without you lifting a finger.</p></div><div class='tab-visual'>
+  <div style='background:#111;padding:.5rem .75rem;border-bottom:1px solid #2a2a2a;display:flex;align-items:center;gap:.5rem'>
+    <div style='width:24px;height:24px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem'>&#128172;</div>
+    <div><div style='font-weight:700;font-size:.75rem'>GymHub AI Assistant</div><div style='font-size:.58rem;color:#22c55e'>● Online — 24/7</div></div>
+  </div>
+  <div style='padding:.45rem .6rem;display:flex;flex-direction:column;gap:.35rem'>
+    <div style='display:flex;justify-content:flex-start'><div style='background:#1a1a1a;border-radius:0 8px 8px 8px;padding:.3rem .55rem;max-width:80%;font-size:.62rem;color:#e5e5e5'>Hi! When does my subscription expire? &#128542;</div></div>
+    <div style='display:flex;justify-content:flex-end'><div style='background:#f97316;border-radius:8px 0 8px 8px;padding:.3rem .55rem;max-width:80%;font-size:.62rem;color:#fff'>Hey Ahmed! Your Monthly Plan expires on <strong>July 5, 2026</strong>. Renew now for 350 EGP &#128079;</div></div>
+    <div style='display:flex;justify-content:flex-start'><div style='background:#1a1a1a;border-radius:0 8px 8px 8px;padding:.3rem .55rem;max-width:80%;font-size:.62rem;color:#e5e5e5'>What are your gym hours?</div></div>
+    <div style='display:flex;justify-content:flex-end'><div style='background:#f97316;border-radius:8px 0 8px 8px;padding:.3rem .55rem;max-width:80%;font-size:.62rem;color:#fff'>We&#39;re open <strong>6 AM – 11 PM</strong> daily, including weekends! &#127947;</div></div>
+    <div style='display:flex;justify-content:flex-start'><div style='background:#1a1a1a;border-radius:0 8px 8px 8px;padding:.3rem .55rem;max-width:80%;font-size:.62rem;color:#e5e5e5'>Can I freeze my membership?</div></div>
+    <div style='display:flex;justify-content:flex-end'><div style='background:#f97316;border-radius:8px 0 8px 8px;padding:.3rem .55rem;max-width:80%;font-size:.62rem;color:#fff'>Yes! You can freeze for up to 2 weeks. Reply with <strong>FREEZE</strong> to confirm &#10024;</div></div>
+  </div>
+</div></div>
     
   </div>
 </section>
-
+​
 <section id='why'>
   <div class='container'>
     <div class='section-tag reveal'>Why GymHub</div>
@@ -204,3 +285,4 @@ footer p{color:var(--muted);font-size:.85rem}
 </script>
 </body>
 </html>
+​
