@@ -101,23 +101,24 @@ footer p{color:var(--muted);font-size:.85rem}
 <body>
 <canvas id='particles'></canvas>
 <nav>
-  <a href='#' class='nav-logo'>Gym<span>Hub</span> &#127947;</a>
+  <a href='#' class='nav-logo'><span>GymHub</span></a>
   <ul class='nav-links' id='navLinks'>
     <li><a href='#features'>Features</a></li>
-    <li><a href='#screenshots'>Screenshots</a></li>
     <li><a href='#why'>Why GymHub</a></li>
   </ul>
-  <a href='https://gym-management-system-production-b6c8.up.railway.app/login' class='nav-cta'>Login &rarr;</a>
+  <a href='https://gym-management-system-production-b6c8.up.railway.app/register' class='nav-cta'>Register &rarr;</a>
   <button class='nav-toggle' onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
 </nav>
 <section id='hero'>
-  <div class='hero-badge'>&#128640; Now Live on Railway</div>
   <h1>The Smarter Way to<br/><span>Run Your Gym</span></h1>
   <div class='typewriter-wrap'><span id='typewriter'></span><span class='cursor'></span></div>
   <div class='hero-btns'>
     <a href='https://gym-management-system-production-b6c8.up.railway.app/login' class='btn-primary'>&#128640; Get Started Free</a>
     <a href='#features' class='btn-secondary'>&#10024; See Features</a>
   </div>
+
+  
+
 </section>
 <section id='stats'>
   <div class='stats-grid'>
@@ -127,16 +128,17 @@ footer p{color:var(--muted);font-size:.85rem}
     <div class='reveal reveal-delay-3'><div class='stat-num' data-target='24'>0</div><div class='stat-label'>&#47;7 AI Support</div></div>
   </div>
 </section>
+
 <section id='problem'>
   <div class='container'>
     <div class='section-tag reveal'>The Problem</div>
     <h2 class='reveal'>Still Managing Your Gym Manually?</h2>
     <p class='section-sub reveal'>Most gym owners waste hours every week on repetitive admin work.</p>
     <div class='problem-grid'>
-      <div class='problem-card reveal'><div class='emoji'>&#128553;</div><h3>Messy Spreadsheets</h3><p>Tracking members in Excel leads to errors, missed renewals, and lost revenue.</p></div>
-      <div class='problem-card reveal reveal-delay-1'><div class='emoji'>&#128203;</div><h3>Paper Attendance</h3><p>Manual sign-in sheets are slow, untrackable, and impossible to analyze.</p></div>
-      <div class='problem-card reveal reveal-delay-2'><div class='emoji'>&#128222;</div><h3>Constant Follow-ups</h3><p>Chasing members for renewals or answering the same WhatsApp questions daily.</p></div>
-      <div class='problem-card reveal reveal-delay-3'><div class='emoji'>&#128201;</div><h3>No Revenue Visibility</h3><p>No clear picture of monthly income or which plans are performing.</p></div>
+      <div class='problem-card reveal'><h3>Messy Spreadsheets</h3><p>Tracking members in Excel leads to errors, missed renewals, and lost revenue.</p></div>
+      <div class='problem-card reveal reveal-delay-1'><h3>Paper Attendance</h3><p>Manual sign-in sheets are slow, untrackable, and impossible to analyze.</p></div>
+      <div class='problem-card reveal reveal-delay-2'><h3>Constant Follow-ups</h3><p>Chasing members for renewals or answering the same WhatsApp questions daily.</p></div>
+      <div class='problem-card reveal reveal-delay-3'><h3>No Revenue Visibility</h3><p>No clear picture of monthly income or which plans are performing.</p></div>
     </div>
     <div class='problem-bottom reveal'><p><strong>GymHub solves all of this &mdash; in one place.</strong></p></div>
   </div>
@@ -147,42 +149,22 @@ footer p{color:var(--muted);font-size:.85rem}
     <h2 class='reveal'>Everything You Need to Run a Modern Gym</h2>
     <p class='section-sub reveal'>Click a feature to learn more.</p>
     <div class='tabs-nav' id='tabsNav'>
-      <button class='tab-btn active' data-tab='0'>&#128101; Members</button>
-      <button class='tab-btn' data-tab='1'>&#128197; Subscriptions</button>
-      <button class='tab-btn' data-tab='2'>&#128202; Attendance</button>
-      <button class='tab-btn' data-tab='3'>&#128176; Revenue</button>
-      <button class='tab-btn' data-tab='4'>&#129302; WhatsApp AI</button>
-      <button class='tab-btn' data-tab='5'>&#127769; Dark UI</button>
+      <button class='tab-btn active' data-tab='0'>Members</button>
+      <button class='tab-btn' data-tab='1'>Subscriptions</button>
+      <button class='tab-btn' data-tab='2'>Attendance</button>
+      <button class='tab-btn' data-tab='3'>Revenue</button>
+      <button class='tab-btn' data-tab='4'>WhatsApp AI</button>
+      
     </div>
     <div id='tab0' class='tab-panel active'><div><div class='tab-icon-big'>&#128101;</div><h3>Member Management</h3><p>Add, edit, and view all your gym members in one place. Track their active status, contact info, subscription history, and attendance from a single powerful profile page.</p></div><div class='tab-visual'>&#128101;</div></div>
     <div id='tab1' class='tab-panel'><div><div class='tab-icon-big'>&#128197;</div><h3>Subscription Plans</h3><p>Create flexible monthly or yearly plans, assign them to members, and get notified before renewals expire. Never lose a paying member to a forgotten renewal again.</p></div><div class='tab-visual'>&#128197;</div></div>
     <div id='tab2' class='tab-panel'><div><div class='tab-icon-big'>&#128202;</div><h3>Attendance Tracking</h3><p>Log daily check-ins instantly, monitor attendance patterns over time, and identify your most and least engaged members with built-in analytics.</p></div><div class='tab-visual'>&#128202;</div></div>
     <div id='tab3' class='tab-panel'><div><div class='tab-icon-big'>&#128176;</div><h3>Revenue Dashboard</h3><p>See your monthly revenue at a glance with beautiful charts. Understand which plans drive the most income and spot growth trends early.</p></div><div class='tab-visual'>&#128176;</div></div>
     <div id='tab4' class='tab-panel'><div><div class='tab-icon-big'>&#129302;</div><h3>WhatsApp AI Assistant</h3><p>An AI-powered WhatsApp bot answers member questions, sends renewal reminders, and handles FAQs automatically 24/7, without you lifting a finger.</p></div><div class='tab-visual'>&#129302;</div></div>
-    <div id='tab5' class='tab-panel'><div><div class='tab-icon-big'>&#127769;</div><h3>Beautiful Dark UI</h3><p>A modern, eye-friendly dark interface with a sleek orange accent color designed to look and feel great on every screen, from desktop to mobile.</p></div><div class='tab-visual'>&#127769;</div></div>
+    
   </div>
 </section>
-<section id='screenshots'>
-  <div class='container'>
-    <div class='section-tag reveal'>Screenshots</div>
-    <h2 class='reveal'>See GymHub in Action</h2>
-    <p class='section-sub reveal'>A clean interface that makes gym management effortless.</p>
-    <div class='carousel'>
-      <div class='carousel-track' id='carouselTrack'>
-        <div class='carousel-slide'><div class='slide-img'>&#128202;</div><div class='slide-info'><h4>Main Dashboard</h4><p>Revenue, attendance stats, and member overview at a glance.</p></div></div>
-        <div class='carousel-slide'><div class='slide-img'>&#128101;</div><div class='slide-info'><h4>Members Page</h4><p>Full member list with search, filters, and quick-action buttons.</p></div></div>
-        <div class='carousel-slide'><div class='slide-img'>&#128197;</div><div class='slide-info'><h4>Subscriptions Page</h4><p>Manage plans, view active subscribers, and track upcoming renewals.</p></div></div>
-        <div class='carousel-slide'><div class='slide-img'>&#128200;</div><div class='slide-info'><h4>Revenue Analytics</h4><p>Monthly income charts, plan performance, and growth trends.</p></div></div>
-        <div class='carousel-slide'><div class='slide-img'>&#129302;</div><div class='slide-info'><h4>WhatsApp AI Chat</h4><p>Live AI assistant handling member queries automatically.</p></div></div>
-      </div>
-    </div>
-    <div class='carousel-controls'>
-      <button class='carousel-btn' id='prevBtn'>&#8592;</button>
-      <div class='carousel-dots' id='carouselDots'></div>
-      <button class='carousel-btn' id='nextBtn'>&#8594;</button>
-    </div>
-  </div>
-</section>
+
 <section id='why'>
   <div class='container'>
     <div class='section-tag reveal'>Why GymHub</div>
